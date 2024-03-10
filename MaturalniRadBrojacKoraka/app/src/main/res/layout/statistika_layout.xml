@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/UkupniKoraci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Ukupni Koraci "
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:id="@+id/Ukupni_Koraci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/UkupniKoraci"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/UkupnaUdaljenost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ukupna udaljenost prekoračena"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/Ukupni_Koraci"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:id="@+id/Ukupna_Udaljenost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/UkupnaUdaljenost"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/UkupnoTrajanje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ukupna trajanost"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/Ukupna_Udaljenost"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20dp"
+
+        />
+
+    <TextView
+        android:id="@+id/Ukupno_Trajanje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/UkupnoTrajanje"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16dp"
+
+        />
+
+
+    <TextView
+        android:id="@+id/ProsjecnaBrzina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prosječna brzina"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/Ukupno_Trajanje"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+
+        />
+
+    <TextView
+        android:id="@+id/Prosjecna_Brzina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/ProsjecnaBrzina"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+
+        />
+
+    <TextView
+        android:id="@+id/ProsjecnaFrekvencija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prosječna frekvencija koraka"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/Prosjecna_Brzina"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+
+        />
+
+    <TextView
+        android:id="@+id/Prosjecna_Frekvencija"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/ProsjecnaFrekvencija"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+
+        />
+
+    <TextView
+        android:id="@+id/KalorijaPotroseno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Ukupno kalorija potrošeno"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@id/Prosjecna_Frekvencija"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+
+        />
+
+    <TextView
+        android:id="@+id/Kalorija_Potroseno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/KalorijaPotroseno"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+
+        />
+
+    <TextView
+        android:id="@+id/TipFizickeAktivnosti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tip fizičke aktivnosti"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/Kalorija_Potroseno"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp"
+
+        />
+
+    <TextView
+        android:id="@+id/Tip_Fizicke_Aktivnosti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_below="@+id/TipFizickeAktivnosti"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+
+        />
+
+</RelativeLayout>
