@@ -1,2 +1,2 @@
 # Zavrsni
-Pedometar
+Brojač Koraka
