@@ -1,0 +1,38 @@
+This code defines a class named AccelerometerData, which represents a data structure to hold accelerometer data. Here's a breakdown of its components:
+
+Class Declaration:
+
+kotlin
+Copy code
+class AccelerometerData {
+This line declares the class named AccelerometerData.
+
+Properties:
+
+value: Represents the magnitude of the accelerometer data.
+x: Represents the x-axis value of the accelerometer data.
+y: Represents the y-axis value of the accelerometer data.
+z: Represents the z-axis value of the accelerometer data.
+time: Represents the timestamp associated with the accelerometer data.
+isRealPeak: Represents whether the data point is considered a real peak.
+Initialization:
+
+kotlin
+Copy code
+var value: Double = 0.0
+var x: Float = 0.0f
+var y: Float = 0.0f
+var z: Float = 0.0f
+var time: Long = 0
+var isRealPeak: Boolean = true
+Each property is initialized with a default value:
+
+value, x, y, and z are initialized with 0.0.
+time is initialized with 0.
+isRealPeak is initialized with true.
+This class is designed to hold accelerometer data points, each comprising a magnitude (value) and individual axis values (x, y, z), along with a timestamp (time). Additionally, it includes a property isRealPeak to denote whether the data point is considered a real peak. This class provides a convenient way to encapsulate and manipulate accelerometer data within the pedometer application.
+
+
+
+
+

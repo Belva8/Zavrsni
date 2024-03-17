@@ -1,0 +1,60 @@
+package com.example.kotlinzavrsni
+This statement declares the package where this class resides.
+
+Import Statements:
+
+kotlin
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.ListView
+import androidx.appcompat.app.AppCompatActivity
+These statements import necessary classes and modules required for this code. For instance, Intent for starting services, Bundle for passing data between activities, ListView for displaying a list of items, and AppCompatActivity for creating activities compatible with the AppCompat library.
+
+Class Declaration:
+
+kotlin
+
+class StepsHistoryActivity : AppCompatActivity() {
+This line declares a class named StepsHistoryActivity which extends AppCompatActivity. This means that StepsHistoryActivity is an activity in Android that supports the modern material design theme.
+
+Member Variables:
+
+kotlin
+
+private lateinit var mStepsDBHelper: StepsDBHelper
+private lateinit var mSensorListView: ListView
+private lateinit var mListAdapter: ListAdapter
+private lateinit var mStepCountList: ArrayList<DateStepsModel>
+These variables are declared but not initialized yet. They will be initialized later in the code.
+
+onCreate() Method:
+
+kotlin
+
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.pedometerlist_layout)
+    mSensorListView = findViewById(R.id.steps_list)
+
+    getDataForList()
+
+    mListAdapter = ListAdapter(mStepCountList, this)
+    mSensorListView.adapter = mListAdapter
+
+    val stepsIntent = Intent(applicationContext, StepsService::class.java)
+    startService(stepsIntent)
+}
+This method is called when the activity is starting. It sets the layout for the activity from the XML layout resource named pedometerlist_layout. It initializes the mSensorListView variable with the ListView component defined in the layout. Then, it calls the getDataForList() method to retrieve data for the list from a database using StepsDBHelper. After getting the data, it creates a new instance of ListAdapter with the obtained data and sets this adapter to the mSensorListView. Finally, it starts a service named StepsService using an intent.
+
+getDataForList() Method:
+
+kotlin
+
+private fun getDataForList() {
+    mStepsDBHelper = StepsDBHelper(this)
+    mStepCountList = mStepsDBHelper.readStepsEntries()
+}
+This method initializes mStepsDBHelper with a new instance of StepsDBHelper and calls its readStepsEntries() method to retrieve step count entries from the database. The retrieved data is stored in the mStepCountList.
+
+This activity is responsible for displaying the history of step counts retrieved from the database in a ListView. It initializes the ListView with the data using a custom adapter and starts a service for updating step counts in real-time.

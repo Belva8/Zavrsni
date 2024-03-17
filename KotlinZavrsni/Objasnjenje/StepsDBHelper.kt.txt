@@ -1,0 +1,73 @@
+This code defines a helper class called StepsDBHelper, which is responsible for managing the SQLite database used in the pedometer application. Let's break it down:
+
+Package Declaration:
+
+kotlin
+Copy code
+package com.example.kotlinzavrsni
+This line specifies the package in which this class resides.
+
+Import Statements: There are no import statements in this code snippet.
+
+Class Declaration:
+
+kotlin
+Copy code
+class StepsDBHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+This line declares the StepsDBHelper class, which extends SQLiteOpenHelper. It takes a Context object as a parameter and passes it to the superclass constructor along with the database name, version, and null for the cursor factory.
+
+Companion Object:
+
+kotlin
+Copy code
+companion object {
+    private const val DATABASE_VERSION = 1
+    private const val DATABASE_NAME = "StepsDatabase"
+    private const val TABLE_STEPS_SUMMARY = "StepsSummary"
+    private const val ID = "id"
+    private const val STEPS_COUNT = "stepscount"
+    private const val CREATION_DATE = "creationdate"
+    private const val CREATE_TABLE_STEPS_SUMMARY = "CREATE TABLE " +
+            "$TABLE_STEPS_SUMMARY ($ID INTEGER PRIMARY KEY AUTOINCREMENT," +
+            "$CREATION_DATE TEXT,$STEPS_COUNT INTEGER)"
+}
+This companion object contains constants related to the database, such as the database version, name, table name, column names, and SQL query to create the table.
+
+onCreate() Method:
+
+kotlin
+Copy code
+override fun onCreate(db: SQLiteDatabase) {
+    db.execSQL(CREATE_TABLE_STEPS_SUMMARY)
+}
+This method is called when the database is created for the first time. It executes an SQL query to create the table specified by the CREATE_TABLE_STEPS_SUMMARY constant.
+
+onUpgrade() Method:
+
+kotlin
+Copy code
+override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+    db.execSQL("DROP TABLE IF EXISTS $TABLE_STEPS_SUMMARY")
+    onCreate(db)
+}
+This method is called when the database needs to be upgraded, such as when the version number changes. It executes an SQL query to drop the existing table if it exists and then calls the onCreate() method to create a new table.
+
+createStepsEntry() Method:
+
+kotlin
+Copy code
+fun createStepsEntry(currentTimeMillis: Long): Boolean {
+    // Function implementation
+}
+This method is responsible for creating a new entry in the database for the current date. It takes the current time in milliseconds as a parameter and returns a boolean indicating whether the entry was created successfully.
+
+readStepsEntries() Method:
+
+kotlin
+Copy code
+fun readStepsEntries(): ArrayList<DateStepsModel> {
+    // Function implementation
+}
+This method is responsible for reading all entries from the database and returning them as a list of DateStepsModel objects, each representing a date and the corresponding step count.
+
+Overall, this class provides methods to create, read, and upgrade the SQLite database used in the pedometer application. It manages the table structure and provides functions to interact with the database.
