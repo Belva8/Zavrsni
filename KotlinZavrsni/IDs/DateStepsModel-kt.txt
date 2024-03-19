@@ -1,9 +1,0 @@
-DatumKoraka
-
-
-package com.example.kotlinzavrsni
-
-class DateStepsModel {
-    var mDate: String = ""    - - --  mDatum
-    var mStepCount: Int = 0  - - - - -mBrojKoraka
-}
