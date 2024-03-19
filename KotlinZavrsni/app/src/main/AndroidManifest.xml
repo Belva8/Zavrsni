@@ -22,10 +22,12 @@
             android:theme="@style/Theme.Kotlinzavrsni">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CustomAlgoResultsActivity" />
+        <activity android:name=".StepsCounterActivity" />
+        <activity android:name=".StepsHistoryActivity" />
     </application>
 
 </manifest>
